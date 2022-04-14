@@ -6,8 +6,11 @@ phases:
     
   build:
     commands:
-      - zip -g deployment_package1.zip imageIndex.py
-      - zip -g deployment_package2.zip imageSearch.py
+      - cd LF1
+      - zip -g deployment_package1.zip lambda_function.py
+      - cd ..
+      - cd LF2
+      - zip -g deployment_package2.zip lambda_function.py
   post_build:
     commands:
       - echo "Updating lambda Function 1..."
