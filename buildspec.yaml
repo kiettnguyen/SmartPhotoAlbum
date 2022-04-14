@@ -6,8 +6,8 @@ phases:
     
   build:
     commands:
-      - zip -g deployment_package1.zip ../LF1/lambda_function.py
-      - zip -g deployment_package2.zip ../LF2/lambda_function.py
+      - zip -r9 deployment_package1.zip ../LF1/lambda_function.py
+      - zip -r9 deployment_package2.zip ../LF2/lambda_function.py
   post_build:
     commands:
       - echo "Updating lambda Function 1..."
