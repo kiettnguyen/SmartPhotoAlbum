@@ -22,3 +22,6 @@ phases:
       - echo "Updating lambda Function 2..."
         #- aws lambda update-function-code --function-name search-photos --zip-file fileb://deployment_package2.zip
       - echo "DONE!!"
+artifacts:
+   files:
+    - '**/*'
