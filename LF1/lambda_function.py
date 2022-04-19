@@ -6,7 +6,7 @@ from opensearchpy import OpenSearch, RequestsHttpConnection
 
 def lambda_handler(event, context):
     # TODO implement
-    #print(event)
+    print(event)
     s3_info = event['Records'][0]['s3']
     bucket_name = s3_info['bucket']['name']
     key_name = s3_info['object']['key']
